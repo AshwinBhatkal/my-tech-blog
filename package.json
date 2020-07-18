@@ -8,8 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.10.4",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
     "next": "9.3.5",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27"
   }
 }

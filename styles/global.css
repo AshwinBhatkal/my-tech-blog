@@ -1,0 +1,22 @@
+@font-face {
+    font-family: pokeHollow;
+    src: url("../public/fonts/PokemonHollow.ttf");
+}
+
+@font-face {
+    font-family: pokeSolid;
+    src: url("../public/fonts/PokemonSolid.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
