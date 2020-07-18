@@ -1,28 +1,31 @@
 {
-  "env": {
-    "production": {
-      "plugins": ["emotion", "@babel/plugin-proposal-optional-chaining"],
-      "presets": [
-        [
-          "@emotion/babel-preset-css-prop",
-          {
-            "autoLabel": true,
-            "labelFormat": "[local]"
-          }
-        ]
-      ]
-    },
-    "development": {
-      "plugins": [["emotion", { "sourceMap": true }], "@babel/plugin-proposal-optional-chaining"],
-      "presets": [
-        [
-          "@emotion/babel-preset-css-prop",
-          {
-            "autoLabel": true,
-            "labelFormat": "[local]"
-          }
-        ]
-      ]
+    "env": {
+        "production": {
+            "plugins": ["emotion", "@babel/plugin-proposal-optional-chaining"],
+            "presets": [
+                [
+                    "@emotion/babel-preset-css-prop",
+                    {
+                        "autoLabel": true,
+                        "labelFormat": "[local]"
+                    }
+                ]
+            ]
+        },
+        "development": {
+            "plugins": [
+                ["emotion", { "sourceMap": true }],
+                "@babel/plugin-proposal-optional-chaining"
+            ],
+            "presets": [
+                [
+                    "@emotion/babel-preset-css-prop",
+                    {
+                        "autoLabel": true,
+                        "labelFormat": "[local]"
+                    }
+                ]
+            ]
+        }
     }
-  }
 }
