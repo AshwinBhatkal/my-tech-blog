@@ -1,13 +1,16 @@
+import colors from "./colors";
+
 export const theme = {
-    colors: {
-        uno: "#ffcb05",
-        dos: "#FFB409",
-        tres: "#008080",
-        cuatro: "#2a75bb",
-        cinco: "#6DBDD6",
-    },
-    fontWeight: {
-        reg: 300,
-        bold: 900,
+    dark: {
+        background: {
+            body: colors.secondary,
+            header: colors.black,
+            footer: colors.black,
+        },
+        color: {
+            primary: colors.primary,
+            activeLink: colors.white,
+            link: colors.primary,
+        }
     },
 };

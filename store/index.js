@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import { createContainer } from "react-tracked";
-import rootReducer from "./reducers";
 import initialState from "./initialState";
+import rootReducer from "./reducers";
 import toggleNavReducer from "./reducers/toggleNavReducer";
 
 const useValue = () => useReducer(toggleNavReducer, initialState);

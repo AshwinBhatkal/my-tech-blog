@@ -1,28 +1,14 @@
 import styled from "@emotion/styled";
 import { maxWidthMQ } from "../../styles/mediaQueries";
 import { useTrackedState } from "../../store";
+import NavLink from "./navLink";
 
 const StyledNav = styled.nav`
     display: flex;
 
-    a {
-        text-decoration: none;
-        color: ${(props) => props?.theme?.colors?.cuatro};
-        font-family: pokeHollow;
-        font-weight: ${(props) => props?.theme?.fontWeight?.bold};
-
-        &:not(:last-child) {
-            margin-right: 2em;
-        }
-
-        &:hover {
-            color: ${(props) => props?.theme?.colors?.cinco};
-        }
-    }
-
     ${maxWidthMQ[1]} {
-        background: ${(props) => props?.theme?.colors?.uno};
-        width: 50%;
+        background: ${(props) => props?.theme?.background?.header};
+        width: 100%;
         height: calc(100vh - (2em + 2.5rem));
         flex-direction: column;
         justify-content: space-around;
@@ -32,11 +18,20 @@ const StyledNav = styled.nav`
         right: 0;
         transform: ${(props) => (props.navOpen ? "translateX(0)" : "translateX(100%)")};
         transition: transform 0.3s ease-in;
+        z-index: 20;
     }
 `;
 
-const Nav = ({ children, navOpen }) => {
-    return <StyledNav navOpen={navOpen}>{children}</StyledNav>;
+const Nav = () => {
+    const { navOpen } = useTrackedState();
+    return (
+        <StyledNav navOpen={navOpen}>
+            <NavLink href="/" name="Home" />
+            <NavLink href="/about" name="About" />
+            <NavLink href="/blog" name="Blog" />
+            <NavLink href="/contact" name="Contact" />
+        </StyledNav>
+    );
 };
 
 export default Nav;

@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
-import { minWidthMQ } from "../../styles/mediaQueries";
 import { useDispatch, useTrackedState } from "../../store";
 import types from "../../store/actionTypes";
+import { minWidthMQ } from "../../styles/mediaQueries";
 
 const StyledHamburger = styled.div`
     & {
         display: block;
         position: relative;
-        background-color: ${(props) => props?.navOpen ? "transparent" : props?.theme?.colors?.cuatro};
+        background-color: ${(props) =>
+            props?.navOpen ? "transparent" : props?.theme?.color?.primary};
     }
 
     &,
@@ -17,6 +18,7 @@ const StyledHamburger = styled.div`
         height: 3px;
         border-radius: 1em;
         transition: all 0.4s ease;
+        border-radius: 50%;
     }
 
     &::before,
@@ -26,16 +28,17 @@ const StyledHamburger = styled.div`
         left: 0;
         right: 0;
         opacity: 1;
-        background-color: ${(props) => props?.theme?.colors?.cuatro};
+        background-color: ${(props) => props?.theme?.color?.primary};
     }
 
     &::before {
-        top: ${(props) => props?.navOpen ? "0rem" : "0.5rem"};
-        transform: ${(props) => props?.navOpen ? "rotate(405deg)" : "rotate(0deg)"};
+        top: ${(props) => (props?.navOpen ? "0rem" : "0.5rem")};
+        transform: ${(props) => (props?.navOpen ? "rotate(225deg)" : "rotate(0deg)")};
     }
+
     &::after {
-        bottom: ${(props) => props?.navOpen ? "0rem" : "0.5rem"};
-        transform: ${(props) => props?.navOpen ? "rotate(-405deg)" : "rotate(0deg)"};
+        bottom: ${(props) => (props?.navOpen ? "0rem" : "0.5rem")};
+        transform: ${(props) => (props?.navOpen ? "rotate(-225deg)" : "rotate(0deg)")};
     }
 
     ${minWidthMQ[1]} {
@@ -43,15 +46,20 @@ const StyledHamburger = styled.div`
     }
 `;
 
-const Hamburger = ({ navOpen }) => {
+const Hamburger = () => {
     const dispatch = useDispatch();
-    const toggleNav = () => {
-        dispatch({
-            type: types.TOGGLE_NAV,
-            navOpen: !navOpen,
-        });
-    };
-    return <StyledHamburger navOpen={navOpen} onClick={toggleNav} />;
+    const { navOpen } = useTrackedState();
+    return (
+        <StyledHamburger
+            navOpen={navOpen}
+            onClick={() =>
+                dispatch({
+                    type: types.TOGGLE_NAV,
+                    navOpen: !navOpen,
+                })
+            }
+        />
+    );
 };
 
 export default Hamburger;

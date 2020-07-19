@@ -7,15 +7,15 @@ const StyledMain = styled.main`
     top: calc(2em + 2.5rem);
 `;
 
-export default function Home() {
+export default function Blog() {
     return (
         <StyledMain>
             <Container>
                 <Head>
-                    <title>Ashwin Bhatkal</title>
+                    <title>Ashwin's Blog</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <span>Alola</span>
+                <span>is</span>
             </Container>
         </StyledMain>
     );
