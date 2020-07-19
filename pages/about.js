@@ -1,22 +1,23 @@
 import Head from "next/head";
-import styled from "@emotion/styled";
 import Container from "../components/container";
-
-const StyledMain = styled.main`
-    position: absolute;
-    top: calc(2em + 2.5rem);
-`;
+import Main from "../components/main";
 
 export default function About() {
     return (
-        <StyledMain>
+        <Main>
             <Container>
                 <Head>
                     <title>About Me</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <span>My name</span>
+                <div style={{ textAlign: "justify" }}>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque iure
+                    incidunt pariatur. Unde, excepturi, voluptatibus rem necessitatibus a nam sint,
+                    quis voluptate maiores quae fugiat ab. Natus molestias rerum beatae ad nulla
+                    reiciendis sint ipsum, dicta nostrum, ex quia id soluta! Similique vel aliquam
+                    veniam consectetur mollitia eum iusto quasi.
+                </div>
             </Container>
-        </StyledMain>
+        </Main>
     );
 }

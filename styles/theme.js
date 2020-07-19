@@ -11,6 +11,6 @@ export const theme = {
             primary: colors.primary,
             activeLink: colors.white,
             link: colors.primary,
-        }
+        },
     },
 };

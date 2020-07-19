@@ -14,6 +14,10 @@ export default class MyApp extends App {
                 <ThemeProvider theme={theme["dark"]}>
                     <GlobalStyles />
                     <Header />
+                    {/* Why is Main not here? 
+                        It gives me the flexibility of extending 
+                        the width of the component whenever required
+                    */}
                     <Component {...pageProps} />
                 </ThemeProvider>
             </Provider>

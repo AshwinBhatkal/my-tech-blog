@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { maxWidthMQ } from "../../styles/mediaQueries";
 import { useTrackedState } from "../../store";
 import NavLink from "./navLink";
+import { headerOffset } from "../../styles/sizes";
 
 const StyledNav = styled.nav`
     display: flex;
@@ -9,12 +10,12 @@ const StyledNav = styled.nav`
     ${maxWidthMQ[1]} {
         background: ${(props) => props?.theme?.background?.header};
         width: 100%;
-        height: calc(100vh - (2em + 2.5rem));
+        height: calc(100vh - ${headerOffset});
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        top: calc(2em + 2.5rem);
+        top: ${headerOffset};
         right: 0;
         transform: ${(props) => (props.navOpen ? "translateX(0)" : "translateX(100%)")};
         transition: transform 0.3s ease-in;
