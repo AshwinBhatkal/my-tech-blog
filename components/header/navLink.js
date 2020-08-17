@@ -3,18 +3,16 @@ import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import { useDispatch } from "../../store";
 import types from "../../store/actionTypes";
-import { minWidthMQ } from "../../styles/mediaQueries";
+import { minWidthMQ, maxWidthMQ } from "../../styles/mediaQueries";
 
 const StyledLink = styled.a`
     text-decoration: none;
     color: ${(props) =>
-        props.isLinkActive ? props?.theme?.color?.activeLink : props?.theme?.color?.link};
-    font-family: pokeHollow;
-    font-weight: bold;
+        props.isLinkActive ? props?.theme?.secondary : props?.theme?.white};
 
     &:hover,
     &:focus {
-        color: ${(props) => props?.theme?.color?.activeLink};
+        color: ${(props) => props?.theme?.secondary};
     }
 
     ${minWidthMQ[1]} {

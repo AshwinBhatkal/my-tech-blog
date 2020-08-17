@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
     display: flex;
 
     ${maxWidthMQ[1]} {
-        background: ${(props) => props?.theme?.background?.header};
+        background: ${(props) => props?.theme?.primary};
         width: 100%;
         height: calc(100vh - ${headerOffset});
         flex-direction: column;

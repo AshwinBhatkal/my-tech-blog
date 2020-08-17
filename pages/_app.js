@@ -11,7 +11,7 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props;
         return (
             <Provider>
-                <ThemeProvider theme={theme["dark"]}>
+                <ThemeProvider theme={theme["light"]}>
                     <GlobalStyles />
                     <Header />
                     {/* Why is Main not here? 

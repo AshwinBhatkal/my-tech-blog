@@ -4,11 +4,12 @@ import { minWidthMQ } from "./mediaQueries";
 
 const formGlobalStyles = (theme) => css`
     body {
-        background: ${theme?.background?.body};
-        color: ${theme?.color?.primary};
+        background: ${theme?.white};
+        color: ${theme?.black};
         font-size: 1.125rem;
         height: 100vh;
         overflow-x: hidden;
+        line-height: 2rem;
     }
 
     ${minWidthMQ[1]} {

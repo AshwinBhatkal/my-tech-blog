@@ -17,20 +17,30 @@ const StyledLogo = styled.img`
     }
 `;
 
+const StyledDiv = styled.div`
+    height: 2.5rem;
+    cursor: pointer;
+    color: ${(props) => props?.theme?.secondary};
+    display: grid;
+    align-items: center;
+    justify-items: center;
+`;
+
 const Logo = () => {
     const dispatch = useDispatch();
     return (
         <Link href="/" passHref>
-            <StyledLogo
-                src="app_logo.svg"
-                alt="AB"
+            <StyledDiv
+                // src="app_logo.svg"
+                // alt="AB"
                 onClick={() =>
                     dispatch({
                         type: types.TOGGLE_NAV,
                         navOpen: false,
                     })
-                }
-            />
+                }>
+                ashwinbhatkal
+            </StyledDiv>
         </Link>
     );
 };
