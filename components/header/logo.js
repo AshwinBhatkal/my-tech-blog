@@ -24,6 +24,7 @@ const StyledDiv = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    font-family: 'Architects Daughter', cursive;
 `;
 
 const Logo = () => {

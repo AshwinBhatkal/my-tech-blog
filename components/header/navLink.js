@@ -20,6 +20,15 @@ const StyledLink = styled.a`
             margin-right: 2em;
         }
     }
+
+    ${maxWidthMQ[1]} {
+        height: 100%;
+        width: 100%;
+        border-top: ${props => `2px solid ${props?.theme?.accent}`};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 const NavLink = ({ href, name, children }) => {

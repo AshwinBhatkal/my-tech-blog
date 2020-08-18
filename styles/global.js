@@ -10,6 +10,7 @@ const formGlobalStyles = (theme) => css`
         height: 100vh;
         overflow-x: hidden;
         line-height: 2rem;
+        font-family: 'Catamaran', sans-serif;
     }
 
     ${minWidthMQ[1]} {
