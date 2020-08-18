@@ -5,7 +5,7 @@ import Nav from "./nav";
 import Container from "../container";
 
 const StyledHeader = styled.header`
-    background: ${(props) => props?.theme?.background?.header};
+    background: ${(props) => props?.theme?.primary};
     padding: 1em 0;
     position: fixed;
     top: 0;

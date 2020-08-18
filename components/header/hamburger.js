@@ -8,7 +8,7 @@ const StyledHamburger = styled.div`
         display: block;
         position: relative;
         background-color: ${(props) =>
-            props?.navOpen ? "transparent" : props?.theme?.color?.primary};
+            props?.navOpen ? "transparent" : props?.theme?.secondary};
     }
 
     &,
@@ -28,7 +28,7 @@ const StyledHamburger = styled.div`
         left: 0;
         right: 0;
         opacity: 1;
-        background-color: ${(props) => props?.theme?.color?.primary};
+        background-color: ${(props) => props?.theme?.secondary};
     }
 
     &::before {

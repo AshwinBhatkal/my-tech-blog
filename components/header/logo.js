@@ -29,8 +29,7 @@ const Logo = () => {
                         type: types.TOGGLE_NAV,
                         navOpen: false,
                     })
-                }
-            />
+                }/>
         </Link>
     );
 };

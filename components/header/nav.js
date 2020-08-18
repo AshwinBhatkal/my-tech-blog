@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
     display: flex;
 
     ${maxWidthMQ[1]} {
-        background: ${(props) => props?.theme?.background?.header};
+        background: ${(props) => props?.theme?.primary};
         width: 100%;
         height: calc(100vh - ${headerOffset});
         flex-direction: column;
@@ -28,9 +28,9 @@ const Nav = () => {
     return (
         <StyledNav navOpen={navOpen}>
             <NavLink href="/" name="Home" />
-            <NavLink href="/about" name="About" />
+            {/* <NavLink href="/about" name="About" /> */}
             <NavLink href="/blog" name="Blog" />
-            <NavLink href="/contact" name="Contact" />
+            {/* <NavLink href="/contact" name="Contact" /> */}
         </StyledNav>
     );
 };
