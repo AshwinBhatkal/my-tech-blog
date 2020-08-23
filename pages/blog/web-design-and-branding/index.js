@@ -159,7 +159,7 @@ export default function Home() {
                     it may become the seed for the creation of your brand.
                 </p>
                 <blockquote>
-                    PS: You can also find this post on <a href="#">Medium</a>
+                    PS: You can also find this post on <a href="https://medium.com/@ashwin96/web-design-and-branding-a-brief-introduction-6f2bdcd49e42">Medium</a>
                 </blockquote>
             </Container>
         </Main>
