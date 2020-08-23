@@ -16,10 +16,10 @@ const StyledHeader = styled.header`
 export const Header = () => {
     return (
         <StyledHeader>
-            <Container flexRow={true}>
+            <Container>
                 <Logo />
-                <Nav />
-                <Hamburger/>
+                {/* <Nav /> */}
+                {/* <Hamburger/> */}
             </Container>
         </StyledHeader>
     );
