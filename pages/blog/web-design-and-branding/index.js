@@ -2,7 +2,7 @@ import Head from "next/head";
 import Container from "../../../components/container";
 import Main from "../../../components/main";
 import Image from "../components/image";
-import { HorizontalDivider } from "../../../components/horizontaldivider";
+import { HorizontalDivider } from "../../../components/horizontalDivider";
 
 export default function Home() {
     return (
@@ -131,7 +131,7 @@ export default function Home() {
                     contrary to popular opinion, the logo is not the brand. It is the ecosystem
                     built around the product experiences that lead to the creation of the brand, and
                     the logo serves as a way to relate with it quickly. What if you had seen the
-                    letter "f" on a blue square block before Facebook launched itself? Would it mean
+                    letter &ldquo;f&rdquo; on a blue square block before Facebook launched itself? Would it mean
                     anything?
                 </p>
                 <blockquote>Upcoming: Choosing a logo for your brand.</blockquote>
