@@ -8,18 +8,20 @@ const StyledContainer = styled.div`
     padding: 0 1em;
     display: flex;
     flex-direction: ${(props) => props?.flexRow};
-    justify-content: space-between;
-    align-items: center;
+    justify-content: ${(props) => props?.justifyContent};
+    align-items: ${(props) => props?.alignItems};
 
     ${minWidthMQ[2]} {
         max-width: ${breakpoints[1]};
     }
 
     ${minWidthMQ[3]} {
-        max-width: ${breakpoints[2]};
+        max-width: ${breakpoints[1]};
     }
 `;
 
-const Container = ({ children }) => <StyledContainer>{children}</StyledContainer>;
+const Container = ({ children, ...props }) => (
+    <StyledContainer {...props}>{children}</StyledContainer>
+);
 
 export default Container;
