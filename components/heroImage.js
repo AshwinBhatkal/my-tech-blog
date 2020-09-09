@@ -8,14 +8,12 @@ const StyledImage = styled.img`
 
     ${minWidthMQ[1]} {
         width: 350px;
-        margin-bottom: 25%;
         grid-area: 1 / 2 / 3 / 3;
         place-self: center;
     }
 
     ${minWidthMQ[2]} {
         width: 400px;
-        margin-bottom: 25%;
     }
 `;
 

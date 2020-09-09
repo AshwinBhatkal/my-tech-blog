@@ -5,21 +5,16 @@ import types from "../store/actionTypes";
 import { maxWidthMQ } from "../styles/mediaQueries";
 
 const StyledButton = styled.a`
-    text-decoration: none;
-    color: ${props => props.theme.button[props.type].color};
-    background: ${props => props.theme.button[props.type].background};
+    color: ${(props) => props.theme.button[props.type].color};
+    background: ${(props) => props.theme.button[props.type].background};
     padding: 0.25em 1.75em;
     font-weight: 700;
     font-size: 1.5rem;
     border-radius: 50px;
-    border: ${props => `3px solid ${props.theme.button[props.type].border}`};
-
-    ${maxWidthMQ[1]} {
-        font-size: 1.375rem
-    }
+    border: ${(props) => `2px solid ${props.theme.button[props.type].border}`};
 
     ${maxWidthMQ[2]} {
-        font-size: 1.25rem
+        font-size: 1.25rem;
     }
 `;
 

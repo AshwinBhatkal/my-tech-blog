@@ -1,6 +1,6 @@
 import { Global, css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
-import { minWidthMQ, maxWidthMQ } from "./mediaQueries";
+import { minWidthMQ } from "./mediaQueries";
 
 const indexMultiplier = {
     one: [1.5, 1.125, 1, 0.875, 0.75],
@@ -9,13 +9,12 @@ const indexMultiplier = {
 };
 
 const headerStyles = (index, base) => {
-    let styles = {};
-    for (let $i = 0; $i < 5; $i++) {
-        styles["h" + ($i + 1)] = {
-            "font-size": base * indexMultiplier[index][$i] + "rem",
+    return indexMultiplier[index].reduce((accumulator, currentValue, index) => {
+        accumulator["h" + (index + 1)] = {
+           fontSize: base * currentValue + "rem",
         };
-    }
-    return styles;
+        return accumulator;
+    }, {});
 };
 
 const formGlobalStyles = (theme) => css`
@@ -24,7 +23,6 @@ const formGlobalStyles = (theme) => css`
         color: ${theme?.primary};
         font-size: 1.125rem;
         height: 100vh;
-        overflow-x: hidden;
         font-family: "Halant", serif;
     }
 
@@ -37,7 +35,6 @@ const formGlobalStyles = (theme) => css`
     a {
         text-decoration: none;
         color: ${theme?.accent};
-        font-size: 1rem;
     }
 
     ${"" /* TODO: Add margin bottom to header styles */}
