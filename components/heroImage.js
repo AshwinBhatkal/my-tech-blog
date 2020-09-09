@@ -8,15 +8,14 @@ const StyledImage = styled.img`
 
     ${minWidthMQ[1]} {
         width: 400px;
+        margin-bottom: 5%;
+        grid-area: 1 / 2 / 3 / 3;
+        place-self: center;
     }
 `;
 
 const HeroImage = () => {
-    return (
-        <div>
-            <StyledImage src="hero.jpg" />
-        </div>
-    );
+    return <StyledImage src="hero.jpg" />;
 };
 
 export default HeroImage;

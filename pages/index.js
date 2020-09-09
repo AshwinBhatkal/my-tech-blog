@@ -3,7 +3,8 @@ import Page from "../components/page";
 import HeroImage from "../components/heroImage";
 import styled from "@emotion/styled";
 import Button from "../components/button";
-import { maxWidthMQ } from "../styles/mediaQueries";
+import { maxWidthMQ, minWidthMQ } from "../styles/mediaQueries";
+import { headerOffset } from "../styles/sizes";
 
 const StyledH1 = styled.h1`
     font-family: Halant, serif;
@@ -16,11 +17,36 @@ const StyledH1 = styled.h1`
 
 const ComponentContainer = styled.div`
     width: 100%;
+    min-height: calc(100vh - ${headerOffset} - 2em);
     display: grid;
     grid-template-rows: auto;
     row-gap: 20px;
     justify-items: center;
     align-items: center;
+
+    ${minWidthMQ[1]} {
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr 1fr;
+        align-items: end;
+    }
+`;
+
+const ButtonContainer = styled.div`
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+
+    ${minWidthMQ[1]} {
+        justify-self: start;
+        align-self: start;
+        display: flex;
+
+        & a:first-child {
+            margin-right: 20px;
+        }
+    }
 `;
 
 export default function Main() {
@@ -33,45 +59,16 @@ export default function Main() {
                         know the things you know.
                     </StyledH1>
                     <HeroImage />
-                    <Button href="/blog" type="cta">
-                        Check out my blog
-                    </Button>
-                    <Button href="/about" type="regular">
-                        Get to know me
-                    </Button>
-                    {/* <IntroContainer>
-                        <StyledH1>
-                            It is not about the number of things you know, it is all about how well
-                            you know the things you know.
-                        </StyledH1>
-                        <ButtonContainer>
-                            <CTAButton href="/blog" isMain={true}>
-                                Check out my blog
-                            </CTAButton>
-                            <CTAButton href="/about" isMain={false}>
-                                Get to know me
-                            </CTAButton>
-                        </ButtonContainer>
-                    </IntroContainer>
-                    <HeroImage /> */}
+                    <ButtonContainer>
+                        <Button href="/blog" type="cta">
+                            Check out my blog
+                        </Button>
+                        <Button href="/about" type="regular">
+                            Get to know me
+                        </Button>
+                    </ButtonContainer>
                 </ComponentContainer>
             </LimitingContainer>
         </Page>
     );
 }
-
-
-
-const IntroContainer = styled.div`
-    width: 60%;
-    margin-right: 30px;
-`;
-
-const ButtonContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    & a + a {
-        margin-left: 30px;
-    }
-`;

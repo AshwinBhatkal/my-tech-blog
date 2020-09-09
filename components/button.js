@@ -14,6 +14,10 @@ const StyledButton = styled.a`
     border-radius: 50px;
     border: ${props => `3px solid ${props.theme.button[props.type].border}`};
 
+    ${maxWidthMQ[1]} {
+        font-size: 1.375rem
+    }
+
     ${maxWidthMQ[2]} {
         font-size: 1.25rem
     }
