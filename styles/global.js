@@ -2,6 +2,21 @@ import { Global, css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
 import { minWidthMQ, maxWidthMQ } from "./mediaQueries";
 
+const indexMultiplier = {
+    two: [1.5, 1.125, 1, 0.875, 0.75],
+    three: [2.25, 1.5, 1.125, 1, 0.875],
+};
+
+const headerStyles = (index, base) => {
+    let styles = {};
+    for (let $i = 0; $i < 5; $i++) {
+        styles["h" + ($i + 1)] = {
+            "font-size": base * indexMultiplier[index][$i] + "rem",
+        };
+    }
+    return styles;
+};
+
 const formGlobalStyles = (theme) => css`
     body {
         background: ${theme?.white};
@@ -9,77 +24,26 @@ const formGlobalStyles = (theme) => css`
         font-size: 1.125rem;
         height: 100vh;
         overflow-x: hidden;
-        font-family: 'Catamaran', serif;
+        font-family: "Halant", serif;
     }
-    
+
     p {
-        line-height: 2.25rem;
-        padding: 10px 0;
+        margin-bottom: 1.15rem;
         text-align: justify;
         text-justify: inter-word;
     }
 
-    h1 {
-        line-height: 3.5rem;
-        padding: 10px 0;
-    }
-
-    h2 {
-        line-height: 2.75rem;
-        padding-top: 20px;
-    }
-
-    h3 {
-        line-height: 2.5rem;
-        padding-top: 15px;
-    }
-
-    ol {
-        list-style: decimal outside none;
-        padding-left: 1em;
-    }
-
-    ol li {
-        padding-left: 3em;
-        line-height: 2.25rem;
-    }
-
-    blockquote {
-        font-style: italic;
-        border-left: 5px solid #48ACF0;
-        border-top: 1px solid #0B2027;
-        border-bottom: 1px solid #0B2027;
-        padding-left: 15px;
-        margin: 20px 0;
-    }
-
     a {
         text-decoration: none;
-        color: #48ACF0;
+        color: ${theme?.accent};
+        font-size: 1rem;
     }
 
-    ${maxWidthMQ[1]} {
-        ol li {
-        padding-left: 1em;
-        }
-    }
-
-    ${maxWidthMQ[2]} {
-        ol li {
-        padding-left: 2em;
-        }
-    }
+    ${"" /* TODO: Add margin bottom to header styles */}
+    ${headerStyles("two", 1)};
 
     ${minWidthMQ[1]} {
-        body {
-            font-size: 1.25rem;
-        }
-    }
-
-    ${minWidthMQ[2]} {
-        body {
-            font-size: 1.3rem;
-        }
+        ${headerStyles("three", 1)};
     }
 `;
 
