@@ -2,19 +2,20 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 import { useDispatch } from "../store";
 import types from "../store/actionTypes";
-import { maxWidthMQ } from "../styles/mediaQueries";
+import { minWidthMQ } from "../styles/mediaQueries";
 
 const StyledButton = styled.a`
     color: ${(props) => props.theme.button[props.type].color};
     background: ${(props) => props.theme.button[props.type].background};
     padding: 0.25em 1.75em;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     border-radius: 50px;
+    text-align: center;
     border: ${(props) => `2px solid ${props.theme.button[props.type].border}`};
 
-    ${maxWidthMQ[2]} {
-        font-size: 1.25rem;
+    ${minWidthMQ[2]} {
+        font-size: 1.5rem;
     }
 `;
 

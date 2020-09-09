@@ -6,37 +6,44 @@ import Button from "../../components/button";
 import { maxWidthMQ, minWidthMQ } from "../../styles/mediaQueries";
 import { headerOffset } from "../../styles/sizes";
 
+const gridGap = "20px";
+
 const ComponentContainer = styled.div`
     width: 100%;
     min-height: calc(100vh - ${headerOffset} - 2em);
     display: grid;
-    grid-gap: 20px 20px;
+    grid-gap: ${gridGap} ${gridGap};
     justify-items: center;
+    text-align: center;
 
     ${minWidthMQ[1]} {
         align-items: end;
     }
 
-    ${maxWidthMQ[1]} {
+    ${minWidthMQ[2]} {
         & h1 {
-            text-align: center;
+            text-align: start;
         }
     }
 `;
 
 const ButtonContainer = styled.div`
     display: grid;
-    row-gap: 20px;
+    row-gap: ${gridGap};
     justify-items: center;
     align-items: center;
 
     ${minWidthMQ[1]} {
+        align-self: start;
+    }
+
+    ${minWidthMQ[2]} {
         justify-self: start;
         align-self: start;
         display: flex;
 
         & a:first-of-type {
-            margin-right: 20px;
+            margin-right: ${gridGap};
         }
     }
 `;
