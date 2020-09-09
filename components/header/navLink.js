@@ -8,11 +8,12 @@ import { minWidthMQ, maxWidthMQ } from "../../styles/mediaQueries";
 const StyledLink = styled.a`
     text-decoration: none;
     color: ${(props) =>
-        props.isLinkActive ? props?.theme?.secondary : props?.theme?.white};
+        props.isLinkActive ? props?.theme?.accent : props?.theme?.white};
+    font-weight: 500;
 
     &:hover,
     &:focus {
-        color: ${(props) => props?.theme?.secondary};
+        color: ${(props) => props?.theme?.accent};
     }
 
     ${minWidthMQ[1]} {

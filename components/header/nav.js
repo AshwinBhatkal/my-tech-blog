@@ -28,9 +28,9 @@ const Nav = () => {
     return (
         <StyledNav navOpen={navOpen}>
             <NavLink href="/" name="Home" />
-            {/* <NavLink href="/about" name="About" /> */}
+            <NavLink href="/about" name="About" />
             <NavLink href="/blog" name="Blog" />
-            {/* <NavLink href="/contact" name="Contact" /> */}
+            <NavLink href="/contact" name="Contact" />
         </StyledNav>
     );
 };

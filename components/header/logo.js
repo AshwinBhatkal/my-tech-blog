@@ -18,20 +18,20 @@ const StyledLogo = styled.img`
 `;
 
 const Logo = () => {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     return (
-        // <Link href="/" passHref>
+        <Link href="/" passHref>
             <StyledLogo
                 src="/app_logo.svg"
                 alt="AB"
-                // onClick={() =>
-                //     dispatch({
-                //         type: types.TOGGLE_NAV,
-                //         navOpen: false,
-                //     })
-                // }
-                />
-        // </Link>
+                onClick={() =>
+                    dispatch({
+                        type: types.TOGGLE_NAV,
+                        navOpen: false,
+                    })
+                }
+            />
+        </Link>
     );
 };
 

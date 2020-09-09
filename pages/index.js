@@ -1,26 +1,77 @@
+import LimitingContainer from "../components/limitingContainer";
+import Page from "../components/page";
+import HeroImage from "../components/heroImage";
 import styled from "@emotion/styled";
-import Link from "next/link";
+import Button from "../components/button";
+import { maxWidthMQ } from "../styles/mediaQueries";
 
-const StyledDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+const StyledH1 = styled.h1`
+    font-family: Halant, serif;
+    width: 100%;
+
+    ${maxWidthMQ[1]} {
+        text-align: center;
+    }
+`;
+
+const ComponentContainer = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    justify-items: center;
     align-items: center;
-    height: 100vh;
 `;
 
 export default function Main() {
     return (
-        <StyledDiv>
-            <div>Being smart I see. 😎 </div>
-            <div> Only 1 page available for now. Others still in development.</div>
-            <div>
-                Click&nbsp;
-                <Link href="/blog/web-design-and-branding">
-                    <a>here</a>
-                </Link>
-                &nbsp;to redirect.
-            </div>
-        </StyledDiv>
+        <Page background={"secondary"}>
+            <LimitingContainer index={3}>
+                <ComponentContainer>
+                    <StyledH1>
+                        It is not about the number of things you know, it is all about how well you
+                        know the things you know.
+                    </StyledH1>
+                    <HeroImage />
+                    <Button href="/blog" type="cta">
+                        Check out my blog
+                    </Button>
+                    <Button href="/about" type="regular">
+                        Get to know me
+                    </Button>
+                    {/* <IntroContainer>
+                        <StyledH1>
+                            It is not about the number of things you know, it is all about how well
+                            you know the things you know.
+                        </StyledH1>
+                        <ButtonContainer>
+                            <CTAButton href="/blog" isMain={true}>
+                                Check out my blog
+                            </CTAButton>
+                            <CTAButton href="/about" isMain={false}>
+                                Get to know me
+                            </CTAButton>
+                        </ButtonContainer>
+                    </IntroContainer>
+                    <HeroImage /> */}
+                </ComponentContainer>
+            </LimitingContainer>
+        </Page>
     );
 }
+
+
+
+const IntroContainer = styled.div`
+    width: 60%;
+    margin-right: 30px;
+`;
+
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    & a + a {
+        margin-left: 30px;
+    }
+`;
