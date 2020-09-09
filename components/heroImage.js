@@ -7,10 +7,15 @@ const StyledImage = styled.img`
     max-width: 100%;
 
     ${minWidthMQ[1]} {
-        width: 400px;
-        margin-bottom: 5%;
+        width: 350px;
+        margin-bottom: 25%;
         grid-area: 1 / 2 / 3 / 3;
         place-self: center;
+    }
+
+    ${minWidthMQ[2]} {
+        width: 400px;
+        margin-bottom: 25%;
     }
 `;
 

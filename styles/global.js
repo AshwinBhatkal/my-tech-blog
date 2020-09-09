@@ -3,7 +3,8 @@ import { withTheme } from "emotion-theming";
 import { minWidthMQ, maxWidthMQ } from "./mediaQueries";
 
 const indexMultiplier = {
-    two: [1.5, 1.125, 1, 0.875, 0.75],
+    one: [1.5, 1.125, 1, 0.875, 0.75],
+    two: [1.75, 1.125, 1, 0.875, 0.75],
     three: [2.25, 1.5, 1.125, 1, 0.875],
 };
 
@@ -40,9 +41,13 @@ const formGlobalStyles = (theme) => css`
     }
 
     ${"" /* TODO: Add margin bottom to header styles */}
-    ${headerStyles("two", 1)};
+    ${headerStyles("one", 1)};
 
     ${minWidthMQ[1]} {
+        ${headerStyles("two", 1)};
+    }
+
+    ${minWidthMQ[2]} {
         ${headerStyles("three", 1)};
     }
 `;

@@ -21,6 +21,7 @@ const ComponentContainer = styled.div`
     display: grid;
     grid-template-rows: auto;
     row-gap: 20px;
+    column-gap: 20px;
     justify-items: center;
     align-items: center;
 
