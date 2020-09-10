@@ -6,10 +6,10 @@ import types from "../../store/actionTypes";
 import { minWidthMQ, maxWidthMQ } from "../../styles/mediaQueries";
 
 const StyledLink = styled.a`
-    color: ${(props) => (props.isLinkActive ? props?.theme?.white : props?.theme?.accent)};
+    color: ${(props) => (props.isLinkActive ? props?.theme?.white : props?.theme?.secondary)};
 
     &:hover {
-        color: ${(props) => (!props.isLinkActive ? props?.theme?.white : props?.theme?.accent)};
+        color: ${(props) => (!props.isLinkActive ? props?.theme?.white : props?.theme?.secondary)};
     }
 
     &:hover {
@@ -25,7 +25,7 @@ const StyledLink = styled.a`
 
 const NavLink = ({ href, name }) => {
     const router = useRouter();
-    const isLinkActive = router.pathname === href ? true : false;
+    const isLinkActive = router.pathname.includes(href.slice(1) || "rSaTnRdIoNmG") ? true : false;
     const dispatch = useDispatch();
     return (
         <Link href={href} passHref>
