@@ -3,7 +3,7 @@ import Page from "../../components/page";
 import HeroImage from "../../components/heroImage";
 import styled from "@emotion/styled";
 import Button from "../../components/button";
-import { maxWidthMQ, minWidthMQ } from "../../styles/mediaQueries";
+import { minWidthMQ } from "../../styles/mediaQueries";
 import { headerOffset } from "../../styles/sizes";
 
 const gridGap = "20px";
@@ -48,14 +48,14 @@ const ButtonContainer = styled.div`
     }
 `;
 
-export default function Main() {
+export default function Home() {
     return (
         <Page background={"secondary"}>
             <LimitingContainer index={3}>
                 <ComponentContainer>
                     <h1>
                         It is not about the number of things you know, it is all about how well you
-                        know the things you know.
+                        use the things you know.
                     </h1>
                     <HeroImage />
                     <ButtonContainer>

@@ -16,7 +16,6 @@ const StyledHamburger = styled.div`
     &::after {
         width: 1.75em;
         height: 3px;
-        border-radius: 1em;
         transition: all 0.4s ease;
         border-radius: 50%;
     }

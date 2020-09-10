@@ -6,20 +6,20 @@ import { headerOffset } from "../../styles/sizes";
 
 const StyledNav = styled.nav`
     display: flex;
+    font-family: "Open Sans", sans-serif;
 
     ${maxWidthMQ[1]} {
+        display: ${(props) => (props.navOpen ? "flex" : "none")};
         background: ${(props) => props?.theme?.primary};
-        width: 100%;
-        height: calc(100vh - ${headerOffset});
+        width: 50%;
+        height: calc((100vh - ${headerOffset}) / 2);
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: absolute;
         top: ${headerOffset};
         right: 0;
-        transform: ${(props) => (props.navOpen ? "translateX(0)" : "translateX(100%)")};
-        transition: transform 0.3s ease-in;
-        z-index: 20;
+        z-index: 15;
     }
 `;
 
