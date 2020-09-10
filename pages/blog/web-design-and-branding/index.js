@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Container from "../../../components/container";
-import Main from "../../../components/main";
+import LimitingContainer from "../../../components/limitingContainer";
+import Page from "../../../components/page";
 import Image from "../components/image";
 import { HorizontalDivider } from "../../../components/horizontalDivider";
 
 export default function Home() {
     return (
-        <Main>
-            <Container flexRow={"column"}>
+        <Page>
+            <LimitingContainer flexDirection={"column"}>
                 <Head>
                     <title>Web Design and Branding</title>
                     <link rel="icon" href="/favicon.ico" />
@@ -161,7 +161,7 @@ export default function Home() {
                 <blockquote>
                     PS: You can also find this post on <a href="https://medium.com/@ashwin96/web-design-and-branding-a-brief-introduction-6f2bdcd49e42">Medium</a>
                 </blockquote>
-            </Container>
-        </Main>
+            </LimitingContainer>
+        </Page>
     );
 }

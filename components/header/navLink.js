@@ -6,13 +6,14 @@ import types from "../../store/actionTypes";
 import { minWidthMQ, maxWidthMQ } from "../../styles/mediaQueries";
 
 const StyledLink = styled.a`
-    text-decoration: none;
-    color: ${(props) =>
-        props.isLinkActive ? props?.theme?.secondary : props?.theme?.white};
+    color: ${(props) => (props.isLinkActive ? props?.theme?.white : props?.theme?.accent)};
 
-    &:hover,
-    &:focus {
-        color: ${(props) => props?.theme?.secondary};
+    &:hover {
+        color: ${(props) => (!props.isLinkActive ? props?.theme?.white : props?.theme?.accent)};
+    }
+
+    &:hover {
+        color: ${(props) => props?.theme?.white};
     }
 
     ${minWidthMQ[1]} {
@@ -20,18 +21,9 @@ const StyledLink = styled.a`
             margin-right: 2em;
         }
     }
-
-    ${maxWidthMQ[1]} {
-        height: 100%;
-        width: 100%;
-        border-top: ${props => `2px solid ${props?.theme?.accent}`};
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 `;
 
-const NavLink = ({ href, name, children }) => {
+const NavLink = ({ href, name }) => {
     const router = useRouter();
     const isLinkActive = router.pathname === href ? true : false;
     const dispatch = useDispatch();
@@ -45,7 +37,7 @@ const NavLink = ({ href, name, children }) => {
                         navOpen: false,
                     })
                 }>
-                {name || children}
+                {name}
             </StyledLink>
         </Link>
     );

@@ -3,8 +3,8 @@ import { ThemeProvider } from "emotion-theming";
 import { Header } from "../components/header/header";
 import { Provider } from "../store";
 import { theme } from "../styles/theme";
-import GlobalStyles from "../styles/global";
-import "../styles/global.css";
+import GlobalStyles from "../styles/global/global";
+import "../styles/global/global.css";
 
 export default class MyApp extends App {
     render() {
