@@ -12,7 +12,7 @@ const ComponentContainer = styled.div`
     width: 100%;
     min-height: calc(100vh - ${headerOffset} - 2em);
     display: grid;
-    grid-gap: ${gridGap} ${gridGap};
+    grid-gap: ${gridGap};
     justify-items: center;
     text-align: center;
 

@@ -6,7 +6,7 @@ import { headerOffset } from "../../styles/sizes";
 
 const StyledNav = styled.nav`
     display: flex;
-    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
 
     ${maxWidthMQ[1]} {
         display: ${(props) => (props.navOpen ? "flex" : "none")};

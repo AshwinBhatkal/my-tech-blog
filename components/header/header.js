@@ -21,24 +21,12 @@ const ComponentContainer = styled.div`
     align-items: center;
 `;
 
-const LogoContainer = styled.div`
-    width: 180px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: ${props => props.theme.secondary};
-    font-family: "Fondamento", sans-serif;
-`;
-
 export const Header = () => {
     return (
         <StyledHeader>
             <LimitingContainer index={3}>
                 <ComponentContainer>
-                    <LogoContainer>
-                        <Logo />
-                        ashwinbhatkal
-                    </LogoContainer>
+                    <Logo />
                     <Nav />
                     <Hamburger />
                 </ComponentContainer>
