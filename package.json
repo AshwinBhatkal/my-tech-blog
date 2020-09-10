@@ -5,14 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "watch": "next-remote-watch ./pages/blog/posts"
   },
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.10.4",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
+    "gray-matter": "^4.0.2",
     "next": "9.3.5",
+    "next-mdx-remote": "^1.0.0",
+    "next-remote-watch": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
