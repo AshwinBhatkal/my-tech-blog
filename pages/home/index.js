@@ -42,7 +42,7 @@ const ButtonContainer = styled.div`
         align-self: start;
         display: flex;
 
-        & a:first-of-type {
+        & button:first-of-type {
             margin-right: ${gridGap};
         }
     }
@@ -59,10 +59,10 @@ export default function Home() {
                     </h1>
                     <HeroImage />
                     <ButtonContainer>
-                        <Button href="/blog" type="cta">
+                        <Button href="/blog" type="accent" size="x-large" weight={700}>
                             Check out my blog
                         </Button>
-                        <Button href="/about" type="regular">
+                        <Button href="/about" type="primary" size="x-large" weight={700}>
                             Get to know me
                         </Button>
                     </ButtonContainer>

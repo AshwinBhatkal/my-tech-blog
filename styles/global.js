@@ -8,12 +8,17 @@ const formGlobalStyles = (theme) => css`
         background: ${theme?.white};
         color: ${theme?.primary};
         font-size: 1.125rem;
-        height: 100vh;
         font-family: "Halant", serif;
     }
 
     button {
-        font-family: "Halant", serif;
+        font-family: inherit;
+        font-size: inherit;
+    }
+    
+    input {
+        font-family: inherit;
+        font-size: inherit;
     }
 
     p {
