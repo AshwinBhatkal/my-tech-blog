@@ -1,6 +1,6 @@
 import { Global, css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
-import { minWidthMQ } from "../mediaQueries";
+import { minWidthMQ } from "./mediaQueries";
 import { headerStyles } from "./utils";
 
 const formGlobalStyles = (theme) => css`
@@ -9,6 +9,10 @@ const formGlobalStyles = (theme) => css`
         color: ${theme?.primary};
         font-size: 1.125rem;
         height: 100vh;
+        font-family: "Halant", serif;
+    }
+
+    button {
         font-family: "Halant", serif;
     }
 
