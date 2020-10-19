@@ -8,13 +8,11 @@ export const theme = {
         white: colors.white,
         black: colors.black,
         button: {
-            regular: {
-                color: colors.primary,
+            primary: {
                 background: "transparent",
                 border: colors.accent,
             },
-            cta: {
-                color: colors.white,
+            accent: {
                 background: colors.accent,
                 border: colors.accent,
             },
