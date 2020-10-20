@@ -19,5 +19,10 @@ export const theme = {
 				color: colors.primary,
 			},
 		},
+		separator: {
+			primary: {
+				background: colors.accent,
+			},
+		},
 	},
 };
